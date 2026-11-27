@@ -1,0 +1,91 @@
+# ============================================================================
+# Pythomic — .gitignore
+#
+# Envia apenas o SOFTWARE (código-fonte). Ignora segredos, dados locais,
+# ambiente virtual e artefatos de build / OS / editor.
+#
+# Atenção à distinção pasta × módulo:
+#   - /uploads/        → pasta de dados (fotos enviadas pelos usuários) — IGNORADA
+#   - pythomic/uploads.py  → módulo de código-fonte — MANTIDO
+#   - database.db      → arquivo de dados do SQLite — IGNORADO
+#   - pythomic/database.py → módulo de código-fonte — MANTIDO
+# ============================================================================
+
+# ── Segredos e dados sensíveis (NUNCA versionar) ─────────────────────────────
+.pythomic_secret
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+
+# ── Banco de dados e arquivos de dados locais ───────────────────────────────
+database.db
+database.db-journal
+database.db-wal
+database.db-shm
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# ── Pasta de uploads (dados dos usuários) — NÃO confunda com uploads.py ─────
+/uploads/
+
+# ── Ambiente virtual ────────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Bytecode e cache do Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ── Testes / cobertura ──────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# ── Empacotamento / build ───────────────────────────────────────────────────
+build/
+dist/
+*.egg
+*.egg-info/
+.eggs/
+wheels/
+
+# ── Editor / IDE ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ── Sistema operacional ─────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+pip-log.txt
+
+# ── Instância do Flask (config local sensível) ──────────────────────────────
+instance/

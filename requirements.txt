@@ -1,0 +1,5 @@
+reactpy>=1.0.0
+reactpy[flask]>=1.0.0
+flask>=2.0.0
+cryptography>=42.0.0
+dnspython>=2.0.0  # validação de domínio de email (MX) — opcional, mas recomendado
