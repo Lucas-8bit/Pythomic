@@ -186,6 +186,10 @@ Atualize o `pip` e instale as dependências do projeto:
 ```bat
 py -m pip install --upgrade pip
 py -m pip install -r requirements.txt
+
+# correção do python3.14:
+python -m pip install --upgrade pip
+python -m pip install --upgrade Flask Werkzeug
 ```
 
 Inicie a aplicação:
